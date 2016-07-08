@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-css.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>JavaScript Test</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Javascript Test</h2>
+        </div>
+        <div class="row" >
+            <div class="col-sm-4" style="background: #EEE;">
+                <table>
+                    <tr>
+                        <td><b>Term:</b>
+                            <span  class="label label-danger" style="display:none;" id="alertmessage1">required
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true" onclick="hideAlert('alertmessage1')">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="text" id="term" required="true" onfocus="hideAlert('alertmessage1')">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>&nbsp;&nbsp;</td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <b>Type:</b>
+                            <span  class="label label-danger" style="display:none;" id="alertmessage">This field is required
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true" onclick="hideAlert('alertmessage')">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select class="form-control" id="type" onfocus="hideAlert('alertmessage')">
+                                <option value = "default" selected="selected">Choose a type</option>
+                                <option value= "positive">Positive</option>
+                                <option value = "negative">Negative</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-primary" role="button" onclick="addElement()" >Add Term</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-sm-4">
+                <h5>Positive:</h5>
+                <ol   id="positive-list">
+                    <!-- This setion will be generated via js -->
+                </ol>
+
+            </div>
+
+            <div class="col-sm-4">
+                <h5>Negative:</h5>
+                <ol  class="table" id="negative-list">
+                    <!-- This section will also be generated using js -->
+                    <!--<div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default">1</button>
+                        <button type="button" class="btn btn-default">2</button>
+                    </div>-->
+                </ol>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery2-min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap-min.js"></script>
+
+    <script src="js/custom_js.js"></script>
+</body>
+
+</html>
